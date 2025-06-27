@@ -1,25 +1,59 @@
-# Gerenciamento de Barbearia
+# <h1 align="center">
 
-Sistema completo para agendamento, gestão de clientes e serviços de uma barbearia local.
+  <a href="https://github.com/lucas-ribeiro03/gerenciamento-de-barbearia">
+    <img src="docs/images/logo.svg" alt="Logo" width="100" height="100">
+  </a>
+</h1>
+
+<div align="center">
+  gerenciamento de barbearia
+  <br />
+  <a href="#about"><strong>Explore the screenshots »</strong></a>
+  <br /><br />
+  <a href="https://github.com/lucas-ribeiro03/gerenciamento-de-barbearia/issues/new?assignees=&labels=bug&template=01_BUG_REPORT.md&title=bug%3A+">Report a Bug</a>
+  ·
+  <a href="https://github.com/lucas-ribeiro03/gerenciamento-de-barbearia/issues/new?assignees=&labels=enhancement&template=02_FEATURE_REQUEST.md&title=feat%3A+">Request a Feature</a>
+  ·
+  <a href="https://github.com/lucas-ribeiro03/gerenciamento-de-barbearia/issues/new?assignees=&labels=question&template=04_SUPPORT_QUESTION.md&title=support%3A+">Ask a Question</a>
+</div>
+
+<div align="center">
+  <br />
+  <img src="https://img.shields.io/github/license/lucas-ribeiro03/gerenciamento-de-barbearia.svg?style=flat-square" />
+  <img src="https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square" />
+  <img src="https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-lucas-ribeiro03-ff1414.svg?style=flat-square" />
+</div>
+
+<details open="open">
+<summary>📚 Table of Contents</summary>
+
+- [Sobre o Projeto](#-sobre-o-projeto)
+  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Começando](#começando)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Instalação](#instalação)
+- [Uso](#uso)
+- [Roadmap](#roadmap)
+- [Suporte](#suporte)
+- [Contribuindo](#contribuindo)
+- [Autores](#autores)
+- [Licença](#licença)
+
+</details>
 
 ---
 
-## Tecnologias Utilizadas
+## 🧾 Sobre o Projeto
 
-- Node.js
-- React
-- Express
-- MySQL
-- Outros...
+Esta é uma aplicação completa de gerenciamento para barbearias, com funcionalidades como:
 
----
+- Agendamento de serviços com escolha de data e hora
+- Autenticação de usuários (cliente e administrador), inclusive com login via Google OAuth
+- Painel administrativo com estatísticas em tempo real
+- Controle de pedidos e serviços com status finalizado/cancelado
+- Interface moderna em React + TypeScript
 
-## Funcionalidades
-
-- Cadastro de clientes e barbeiros
-- Agendamento e gerenciamento de serviços
-- Controle financeiro básico
-- Autenticação e permissões de usuário
+> Este projeto surgiu da necessidade real de uma barbearia local, que não tinha controle digital de horários nem dos serviços realizados.
 
 ---
 
