@@ -59,7 +59,7 @@ Esta é uma aplicação completa de gerenciamento para barbearias, com funcional
 
 ## Screenshots
 
-![Admin Home Page](docs/images/screenshot_1.png)
+![Admin Home Page](docs/images/Screenshot_1.png)
 
 ![Cliente Home Page](docs/images/Screenshot_2.png)
 
