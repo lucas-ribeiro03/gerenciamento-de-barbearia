@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # <h1 align="center">
 
   <a href="https://github.com/lucas-ribeiro03/gerenciamento-de-barbearia">
