@@ -1,0 +1,167 @@
+.modal {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #72727234;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 11111111111;
+
+  .mdContainer {
+    background: #ccc;
+    border-radius: 10px;
+    padding: 2rem 4rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: #000;
+    font-size: 1.15rem;
+
+    .barber {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        padding: 0.6rem 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.25s;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        background-image: url("../../assets/chevron-down-icon.svg");
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        background-position: right 0.5rem center;
+      }
+    }
+
+    .service {
+      display: flex;
+      flex-direction: column;
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        svg {
+          transition: 0.25s;
+        }
+      }
+
+      .services {
+        display: none;
+      }
+
+      .servicesActive {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+        max-height: 100px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        transition: 0.25s;
+        margin-top: 1rem;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        span {
+          background: #fff;
+          padding: 0.35rem 0.6rem;
+          font-size: 1.15rem;
+          border-radius: 0.45rem;
+          display: flex;
+          gap: 2.5rem;
+          cursor: pointer;
+        }
+      }
+
+      .arrow {
+        transition: 0.4s;
+        cursor: pointer;
+      }
+
+      svg {
+        position: relative;
+      }
+    }
+
+    .date {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .data {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .day,
+      .month {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        padding: 0.6rem 2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.25s;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        background-image: url("../../assets/chevron-down-icon.svg");
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        background-position: right 0.5rem center;
+      }
+    }
+    button {
+      border: none;
+      border-radius: 6px;
+      padding: 0.3rem 1rem;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: 0.25s;
+
+      &:hover {
+        color: #fff;
+        background: #000;
+      }
+    }
+
+    .closeBtn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 10px;
+      background: #c5c5c5;
+      padding: 0.5rem;
+      font-size: 1.15rem;
+      cursor: pointer;
+      transition: 0.15s;
+      z-index: 3000;
+
+      &:hover {
+        background: red;
+        color: #fff;
+      }
+    }
+  }
+}
