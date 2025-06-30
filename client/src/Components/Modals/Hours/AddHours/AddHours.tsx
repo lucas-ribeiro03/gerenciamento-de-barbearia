@@ -15,6 +15,7 @@ interface AddHoursProps {
 }
 
 const AddHours: React.FC<AddHoursProps> = ({ onClose }) => {
+  const now = new Date();
   const [day, setDay] = useState(new Date().getDate());
   const [month, setMonth] = useState(new Date().getMonth() + 1);
   const [selectedHours, setSelectedHours] = useState<Hours[]>([] as Hours[]);
@@ -26,11 +27,11 @@ const AddHours: React.FC<AddHoursProps> = ({ onClose }) => {
 
   const handleNextDay = () => {
     const today = new Date();
-    const month = today.getMonth();
+    const currentMonth = today.getMonth();
     const year = today.getFullYear();
 
-    const totalDaysInMonth = new Date(year, month + 1, 0).getDate();
-
+    const totalDaysInMonth = new Date(year, currentMonth + 1, 0).getDate();
+    console.log(new Date(year, 0, today.getDate()));
     if (day < totalDaysInMonth) {
       setDay(day + 1);
     }
@@ -81,9 +82,12 @@ const AddHours: React.FC<AddHoursProps> = ({ onClose }) => {
           <div className={styles.dayWrapper} style={{ gridArea: "box1" }}>
             <button
               onClick={() => {
-                if (day === new Date().getDate()) {
+                const currentMonth = now.getMonth();
+                if (currentMonth + 1 === month && day === now.getDate()) {
                   return;
                 }
+
+                if (day === 1) return;
 
                 setDay(day - 1);
               }}
@@ -96,16 +100,20 @@ const AddHours: React.FC<AddHoursProps> = ({ onClose }) => {
             </button>
           </div>
           <select
-            onChange={(e) => setMonth(Number(e.target.value))}
+            onChange={(e) => {
+              setMonth(Number(e.target.value));
+              setDay(now.getDate());
+              console.log(13 - month);
+            }}
             value={month}
             name="months"
             id="months"
             className={styles.select}
             style={{ gridArea: "box2" }}
           >
-            {Array.from({ length: 12 }, (_, i) => (
-              <option value={i + 1} key={i}>
-                {i + 1}
+            {Array.from({ length: 13 - month }, (_, i) => (
+              <option value={month + 1} key={i}>
+                {month + i}
               </option>
             ))}
           </select>
