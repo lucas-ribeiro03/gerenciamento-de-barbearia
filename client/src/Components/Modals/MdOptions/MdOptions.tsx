@@ -6,6 +6,10 @@ interface MdOptionsProps {
   button2?: string;
   function1?: () => void;
   function2?: () => void;
+  input?: React.DetailedHTMLProps<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    HTMLInputElement
+  >;
   onClose: () => void;
 }
 
@@ -15,10 +19,12 @@ const MdOptions: React.FC<MdOptionsProps> = ({
   onClose,
   function1,
   function2,
+  input,
 }) => {
   return (
     <div className={styles.modal}>
       <div className={styles.mdContainer}>
+        {input && <input type="text" />}
         {button1 && (
           <button onClick={() => (function1 ? function1() : null)}>
             {button1}
