@@ -15,4 +15,20 @@ router.get("/barbeiros", async (req, res) => {
   return res.json(barbeiros);
 });
 
+router.put("/", validateToken, async (req, res) => {
+  const { nome, username, tel, email } = req.body;
+  const { id } = req.user;
+  await Usuario.update(
+    {
+      nome,
+      username,
+      tel,
+      email,
+    },
+    { where: { id } }
+  );
+
+  return res.json("cabou");
+});
+
 module.exports = router;

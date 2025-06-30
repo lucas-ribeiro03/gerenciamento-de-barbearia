@@ -39,6 +39,7 @@ const DailyStats = () => {
   const getStats = async () => {
     const response = await axios.get("http://localhost:3001/stats/dayStats");
     setStats(response.data);
+    console.log(response);
   };
 
   useEffect(() => {

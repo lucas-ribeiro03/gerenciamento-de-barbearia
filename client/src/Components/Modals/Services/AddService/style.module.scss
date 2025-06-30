@@ -12,16 +12,17 @@
 
   .addServiceForm {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: start;
-    justify-content: center;
-    position: relative;
+    padding: 2rem 3rem;
+    border-radius: 9px;
+    gap: 3rem;
 
     .inputBox {
       position: relative;
       width: 100%;
 
-      label {
+      .label {
         position: absolute;
         color: #9f9f9f;
         left: 1rem;
@@ -81,8 +82,8 @@
   }
 }
 
-input:focus + label,
-input:not(:placeholder-shown) + label {
+input:focus + .label,
+input:not(:placeholder-shown) + .label {
   font-size: 0.8rem;
   color: #fff;
   transform: translateY(-2rem);

@@ -121,7 +121,7 @@ const Login = () => {
   return (
     <div>
       <div className={styles.loginContainer}>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <img
             src={logo}
             className={styles.logo}
@@ -142,7 +142,9 @@ const Login = () => {
                     required: "Campo obrigatório",
                   })}
                 />
-                <label htmlFor="email-or-username">Email ou Username</label>
+                <label className={styles.label} htmlFor="email-or-username">
+                  Email ou Username
+                </label>
                 {errors.identifier && (
                   <div className={styles.errorMessage}>
                     {errors.identifier.message}
@@ -157,7 +159,9 @@ const Login = () => {
                   placeholder=" "
                   {...register("senha")}
                 />
-                <label htmlFor="senha">Senha</label>
+                <label className={styles.label} htmlFor="senha">
+                  Senha
+                </label>
                 {errors.senha && (
                   <div className={styles.errorMessage}>
                     {errors.senha.message}
@@ -205,7 +209,9 @@ const Login = () => {
                   placeholder=" "
                   {...register("username")}
                 />
-                <label htmlFor="username">Username</label>
+                <label className={styles.label} htmlFor="username">
+                  Username
+                </label>
                 {errors.username && (
                   <div className={styles.errorMessage}>
                     {errors.username.message}
@@ -242,7 +248,9 @@ const Login = () => {
                     }
                   }}
                 />
-                <label htmlFor="tel">Tel</label>
+                <label className={styles.label} htmlFor="tel">
+                  Tel
+                </label>
                 {errors.tel && (
                   <div className={styles.errorMessage}>
                     {errors.tel.message}
@@ -257,7 +265,9 @@ const Login = () => {
                   placeholder=" "
                   {...register("email")}
                 />
-                <label htmlFor="email">Email</label>
+                <label className={styles.label} htmlFor="email">
+                  Email
+                </label>
                 {errors.email && (
                   <div className={styles.errorMessage}>
                     {errors.email.message}

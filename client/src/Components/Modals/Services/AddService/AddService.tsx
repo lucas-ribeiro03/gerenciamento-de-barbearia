@@ -64,7 +64,9 @@ const AddService: React.FC<AddServiceProps> = ({ onClose, editingService }) => {
             id="nome"
             placeholder=" "
           />
-          <label htmlFor="nome">Nome do procedimento</label>
+          <label className={styles.label} htmlFor="nome">
+            Nome do procedimento
+          </label>
         </div>
         <div className={styles.inputBox}>
           <input
@@ -73,7 +75,7 @@ const AddService: React.FC<AddServiceProps> = ({ onClose, editingService }) => {
             value={preco ?? ""}
             onChange={(e) => setPreco(Number(e.target.value))}
           />
-          <label>Preço </label>
+          <label className={styles.label}>Preço </label>
         </div>
         <select
           value={categoria}

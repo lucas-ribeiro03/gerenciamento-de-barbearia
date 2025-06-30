@@ -9,7 +9,7 @@
   margin: 0;
 }
 
-form {
+.form {
   background: #202020;
   color: #fff;
   display: flex;
@@ -29,7 +29,7 @@ form {
       position: relative;
       width: 100%;
 
-      label {
+      .label {
         position: absolute;
         color: #9f9f9f;
         left: 1rem;
@@ -117,8 +117,8 @@ form {
   }
 }
 
-input:focus + label,
-input:not(:placeholder-shown) + label {
+input:focus + .label,
+input:not(:placeholder-shown) + .label {
   font-size: 0.8rem;
   color: #fff;
   transform: translateY(-2rem);

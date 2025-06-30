@@ -41,7 +41,7 @@ const Navbar = () => {
                   Agendar <FaCalendarAlt />
                 </a>
               </li>
-              <li>
+              <li onClick={() => setMdProfileVisible(true)}>
                 <a>
                   Perfil <BsPersonFill />
                 </a>

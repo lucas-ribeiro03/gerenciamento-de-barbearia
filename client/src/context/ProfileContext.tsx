@@ -25,7 +25,6 @@ export const ProfileProvider: React.FC<ProfileProviderProps> = ({
       headers: { accessToken: localStorage.getItem("token") },
     });
 
-    console.log(response);
     setUser(response.data);
   };
 

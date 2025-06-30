@@ -39,7 +39,6 @@ const WeekStats = () => {
   const getStats = async () => {
     const response = await axios.get("http://localhost:3001/stats/weekStats");
     setStats(response.data);
-    console.log(response.data);
   };
 
   useEffect(() => {
