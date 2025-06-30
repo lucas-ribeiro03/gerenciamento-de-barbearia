@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
