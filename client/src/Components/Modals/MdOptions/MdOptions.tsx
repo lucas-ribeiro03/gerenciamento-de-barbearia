@@ -2,10 +2,10 @@ import { IoIosClose } from "react-icons/io";
 import styles from "./style.module.scss";
 
 interface MdOptionsProps {
-  button1: string;
-  button2: string;
-  function1: () => void;
-  function2: () => void;
+  button1?: string;
+  button2?: string;
+  function1?: () => void;
+  function2?: () => void;
   onClose: () => void;
 }
 
@@ -19,8 +19,16 @@ const MdOptions: React.FC<MdOptionsProps> = ({
   return (
     <div className={styles.modal}>
       <div className={styles.mdContainer}>
-        <button onClick={() => function1()}>{button1}</button>
-        <button onClick={() => function2()}>{button2}</button>
+        {button1 && (
+          <button onClick={() => (function1 ? function1() : null)}>
+            {button1}
+          </button>
+        )}
+        {button2 && (
+          <button onClick={() => (function2 ? function2() : null)}>
+            {button2}
+          </button>
+        )}
         <IoIosClose onClick={() => onClose()} />
       </div>
     </div>
