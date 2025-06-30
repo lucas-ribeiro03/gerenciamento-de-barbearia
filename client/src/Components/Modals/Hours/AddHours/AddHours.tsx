@@ -103,7 +103,6 @@ const AddHours: React.FC<AddHoursProps> = ({ onClose }) => {
             onChange={(e) => {
               setMonth(Number(e.target.value));
               setDay(now.getDate());
-              console.log(13 - month);
             }}
             value={month}
             name="months"
@@ -111,9 +110,9 @@ const AddHours: React.FC<AddHoursProps> = ({ onClose }) => {
             className={styles.select}
             style={{ gridArea: "box2" }}
           >
-            {Array.from({ length: 13 - month }, (_, i) => (
-              <option value={month + 1} key={i}>
-                {month + i}
+            {Array.from({ length: 13 - (now.getMonth() + 1) }, (_, i) => (
+              <option value={now.getMonth() + 1 + i} key={i}>
+                {now.getMonth() + 1 + i}
               </option>
             ))}
           </select>
