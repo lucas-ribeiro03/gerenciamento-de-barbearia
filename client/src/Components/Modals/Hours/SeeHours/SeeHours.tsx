@@ -13,6 +13,7 @@ interface SeeHoursProps {
 
 const SeeHours: React.FC<SeeHoursProps> = ({ onClose }) => {
   const now = new Date();
+  const currentMonth = now.getMonth() + 1;
   const [day, setDay] = useState(new Date().getDate());
   const [month, setMonth] = useState(new Date().getMonth() + 1);
   const [selected, setSelected] = useState([] as Hours[]);
@@ -75,9 +76,11 @@ const SeeHours: React.FC<SeeHoursProps> = ({ onClose }) => {
           <div className={styles.dayWrapper} style={{ gridArea: "box1" }}>
             <button
               onClick={() => {
-                if (day === new Date().getDate()) {
+                if (currentMonth === month && day === now.getDate()) {
                   return;
                 }
+
+                if (day === 1) return;
 
                 setDay(day - 1);
               }}
@@ -90,16 +93,19 @@ const SeeHours: React.FC<SeeHoursProps> = ({ onClose }) => {
             </button>
           </div>
           <select
-            onChange={(e) => setMonth(Number(e.target.value))}
+            onChange={(e) => {
+              setMonth(Number(e.target.value));
+              setDay(now.getDate());
+            }}
             value={month}
             name="months"
             id="months"
             className={styles.select}
             style={{ gridArea: "box2" }}
           >
-            {Array.from({ length: 12 }, (_, i) => (
-              <option value={i + 1} key={i}>
-                {i + 1}
+            {Array.from({ length: 13 - (now.getMonth() + 1) }, (_, i) => (
+              <option value={now.getMonth() + 1 + i} key={i}>
+                {now.getMonth() + 1 + i}
               </option>
             ))}
           </select>
