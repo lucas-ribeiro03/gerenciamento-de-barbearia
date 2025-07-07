@@ -1,0 +1,24 @@
+.mainCards {
+  display: grid;
+  grid-template-areas: "box1 box1 box1" "box2 box3 box4";
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.scissor {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  background: #c9c8c8;
+  padding: 2rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.25s;
+
+  &:hover {
+    background: #656565;
+  }
+}
