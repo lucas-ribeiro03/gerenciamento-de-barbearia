@@ -25,7 +25,7 @@
 </div>
 
 <details open="open">
-<summary>📚 Table of Contents</summary>
+<summary>📚 Conteúdo</summary>
 
 - [Sobre o Projeto](#-sobre-o-projeto)
   - [Tecnologias Utilizadas](#tecnologias-utilizadas)
